@@ -38,13 +38,13 @@ class _ImageInputState extends State<ImageInput> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                  color: Theme.of(context).primaryColorDark, width: 3)),
+                  color: Theme.of(context).primaryColorLight, width: 3)),
           height: 150,
           width: 150,
           alignment: Alignment.center,
@@ -59,6 +59,7 @@ class _ImageInputState extends State<ImageInput> {
                 )
               : Image.asset("assets/camera.png"),
         ),
+        const SizedBox(width: 40),
         Column(
           children: [
             ElevatedButton(
